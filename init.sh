@@ -72,7 +72,7 @@ function configEnvFiles() {
     cp $CURRENT_PATH/.env.example $CURRENT_PATH/.env
     sed -i "s/PROJECT_NAME=.*/PROJECT_NAME=$PROJECT_NAME/g" $CURRENT_PATH/.env
     sed -i "s/MYSQL_DATABASE=.*/MYSQL_DATABASE=${PROJECT_NAME}_db/g" $CURRENT_PATH/.env
-    sed -i "s/MYSQL_USERNAME=.*/MYSQL_USERNAME=docker/g" $CURRENT_PATH/.env
+    sed -i "s/MYSQL_USER=.*/MYSQL_USER=docker/g" $CURRENT_PATH/.env
     sed -i "s/MYSQL_PASSWORD=.*/MYSQL_PASSWORD=$MYSQL_PASSWORD/g" $CURRENT_PATH/.env
     sed -i "s/MYSQL_ROOT_PASSWORD=.*/MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD/g" $CURRENT_PATH/.env
     
@@ -83,7 +83,7 @@ function configEnvFiles() {
     sed -i "s/DB_HOST=.*/DB_HOST=database/g" $CURRENT_PATH/www/.env
     sed -i "s/DB_PORT=.*/DB_PORT=3306/g" $CURRENT_PATH/www/.env
     sed -i 's/DB_DATABASE=.*/DB_DATABASE="${MYSQL_DATABASE}"/g' $CURRENT_PATH/www/.env
-    sed -i 's/DB_USERNAME=.*/DB_USERNAME="${MYSQL_USERNAME}"/g' $CURRENT_PATH/www/.env
+    sed -i 's/DB_USER=.*/DB_USER="${MYSQL_USER}"/g' $CURRENT_PATH/www/.env
     sed -i 's/DB_PASSWORD=.*/DB_PASSWORD="${MYSQL_PASSWORD}"/g' $CURRENT_PATH/www/.env
 }
 
