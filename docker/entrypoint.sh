@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-service nginx start 
+service nginx start
 
-service php8.1-fpm start 
+service php8.2-fpm start
 
 chmod a+rw -R .
 
@@ -24,7 +24,7 @@ echo "========================================"
 echo ""
 echo ""
 
-npm run watch
+# npm run watch
 
 # prevent container from exiting
 /bin/bash

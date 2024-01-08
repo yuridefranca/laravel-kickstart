@@ -3,10 +3,14 @@ version: '3.7'
 services:
   app:
     container_name: ${PROJECT_NAME}-app
-    image: yuridefranca/php-npm:1.0.0
-    working_dir: /var/www/app
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+      args:
+        - IMAGE_VERSION=2.0.0-npm
+    image: ${PROJECT_NAME}/php
+    working_dir: /var/www/html
     restart: unless-stopped
-    entrypoint: ./entrypoint.sh
     tty: true
     env_file:
       - ./.env
@@ -14,7 +18,7 @@ services:
       - ${APP_PORT_HTTP}:80
       - ${APP_PORT_HTTPS}:443
     volumes:
-      - ./www/:/var/www/app
+      - ./www/:/var/www/html
     networks:
       - network-backend
     depends_on:
