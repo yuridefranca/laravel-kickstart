@@ -1,48 +1,34 @@
-# Nome do projeto - Empresa
+# Laravel Kickstart
 
-Escreva uma breve descrição do projeto
+## Repostiório com um kickstar para projetos em Laravel. <br><br>
 
-<br>
+### Pré-requisitos: <br>
 
-## Features
+Para fazer o uso desse kickstart você precisará ter em seu computador as seguintes ferramentas: <br>
+    > Git - https://git-scm.com/  <br>
+    > Docker - https://www.docker.com/  <br><br>
 
-<br>
 
-## Documentação
-
-<br>
-
-## Pré-requisitos
-
-Para fazer o uso desse projeto você precisará ter em seu computador as seguintes ferramentas:
-
-- [Git](https://git-scm.com/)
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
-
-<br>
-
-## Referências
-
-<br>
-
-## Modo de usar
-
+### Modo de usar 
 ``` bash
+
 # Clone o repositório
-$ git clone 
+$ git clone git@github.com:yuridefranca/laravel-kickstart.git 
 
-# Entre no diretório raiz do projeto
-$ cd 
+# Entre na pasta aonde o repositório foi clonado
+$ cd laravel-kickstart
 
-# Execute o seguinte comando para iniciar o docker
+# Na raiz do projeto execute o seguinte script para fazer as configurações
+$ ./init.sh
+
+# Acesse o projeto no novo path
+$ cd .. && cd nome-do-projeto
+
+# Para rodar os containers basta executar o seguinte script
 $ ./startDocker.sh
 
-# O servidor inciará na porta definida no arquivo .env na variável "DOCKER_APP_PORT" por padrão está definido como 80 - acesse <http://localhost:80>
 ```
 
-<br>
 
-## LICENÇA
 
-[MIT](./LICENSE)
+
