@@ -1,34 +1,53 @@
 # Laravel Kickstart
 
-## Repostiório com um kickstar para projetos em Laravel. <br><br>
+Repositório com o kickstart para projetos em Laravel
 
-### Pré-requisitos: <br>
+<br>
 
-Para fazer o uso desse kickstart você precisará ter em seu computador as seguintes ferramentas: <br>
-    > Git - https://git-scm.com/  <br>
-    > Docker - https://www.docker.com/  <br><br>
+## Pré-requisitos
 
+Para fazer o uso desse projeto você precisará ter em seu computador as seguintes ferramentas:
 
-### Modo de usar 
+- [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+<br>
+
+### Modo de usar
 ``` bash
-
 # Clone o repositório
-$ git clone git@github.com:yuridefranca/laravel-kickstart.git 
+$ git clone git@github.com:yuridefranca/laravel-kickstart.git
 
-# Entre na pasta aonde o repositório foi clonado
+# Entre no diretório do kickstart
 $ cd laravel-kickstart
 
-# Na raiz do projeto execute o seguinte script para fazer as configurações
+# Execute o seguinte comando
 $ ./init.sh
 
-# Acesse o projeto no novo path
-$ cd .. && cd nome-do-projeto
-
-# Para rodar os containers basta executar o seguinte script
-$ ./startDocker.sh
+# Abrirá um menu para onde será definido as configurações do projeto
 
 ```
 
+### Instruções Menu <br>
 
+Preencha o nome do projeto em kebab-case ex:
 
+![Dialog Nome do Projeto](/images/dialog-nome-do-projeto.png)
 
+Escolha a ferramenta que será usada no frontend:
+
+![Dialog Nome do Projeto](/images/dialog-ferramenta-frontend.png)
+
+<br>
+
+### Instruções Docker
+
+``` bash
+# Para "subir" o docker execute o seguinte script:
+$ ./startDocker.sh
+
+# Para parar o docker execute o seguinte script:
+$ ./stopDocker.sh
+
+```
