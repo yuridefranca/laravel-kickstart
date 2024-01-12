@@ -41,6 +41,7 @@ function projectFrontendToolDialog() {
                 --menu "Escolha a ferramenta que será utilizada para construir o frontend da aplicação"     \
                 12 50 10                                                                                    \
                 1 "Laravel Blade"                                                                           \
+                2 "Vue"                                                                                     \
                 2>&1 >/dev/tty
     ) || userExit
 
